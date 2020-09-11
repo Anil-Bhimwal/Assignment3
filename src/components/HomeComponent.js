@@ -3,7 +3,8 @@ import Menu from './MenuComponent';
 import DishDetail from './DishdetailComponent';
 import NavbarComponent from './Navbar';
 import { DISHES } from '../shared/dishes';
-
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 class Home extends Component {
 
   constructor(props) {
@@ -21,11 +22,12 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <NavbarComponent />
+        <Header />
         <div className="container">
           <Menu dishes={this.state.dishes} onClick={(dishId) => this.onDishSelect(dishId)} />
           <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
         </div>
+        <Footer />
       </div>
     );
   }

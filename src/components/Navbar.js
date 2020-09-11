@@ -10,8 +10,7 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem,
-  NavbarText
+  DropdownItem
 } from 'reactstrap';
 
 const NavbarComponent = (props) => {
@@ -21,32 +20,32 @@ const NavbarComponent = (props) => {
 
   return (
     <div>
-      <Navbar color="primary" light expand="md">
-        <NavbarBrand href="/">Continuous Food </NavbarBrand>
+      <Navbar  style={{backgroundColor:'#41444a' ,color: '#ffffff'}} variant="dark"light expand="md">
+        <NavbarBrand style={{color: '#ffffff', fontStyle:"italic"}}href="/">Continuous Food </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="#">Home</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="#">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">About</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="">Contact Us</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="">Contact Us</NavLink>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
+            <UncontrolledDropdown style={{backgroundColor:'#41444a'}} nav inNavbar>
+              <DropdownToggle style={{backgroundColor:'#41444a' ,color: '#ffffff'}} nav caret>
                 Categories
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>
+                <DropdownItem >
                   Beverages
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem > 
                   Lunch Items
                 </DropdownItem>
-                <DropdownItem>
+                <DropdownItem >
                   Dinner
                 </DropdownItem>
               </DropdownMenu>

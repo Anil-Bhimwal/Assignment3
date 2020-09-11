@@ -40,11 +40,11 @@ export default function DishDetail(props) {
         let dish = props.dish;
         return (
             <div className="row">
-                <Card Body className="col-lg-6 dish-image">
+                <Card Body className="col-md-6 dish-image">
                     <CardImg top width="100%" src={dish.image} alt={dish.name} />
 
                 </Card>
-                <Card Body className="col-lg-6">
+                <Card Body className="col-md-6">
                     <CardHeader className="text-right">
                         <button>Add</button>
                     </CardHeader>
