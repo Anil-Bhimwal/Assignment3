@@ -21,7 +21,7 @@ const NavbarComponent = (props) => {
 
   return (
     <div>
-      <Navbar color="light" light expand="md">
+      <Navbar color="primary" light expand="md">
         <NavbarBrand href="/">Continuous Food </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>

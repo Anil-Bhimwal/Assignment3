@@ -10,7 +10,7 @@ function renderComments(comments) {
             <ListGroupItem key={comment.id}>
                 <ListGroupItemHeading>
                 <Badge>
-                {comment.author},
+{comment.author},
                         &nbsp;
                         {new Intl.DateTimeFormat('en-US', {
                     year: 'numeric',
