@@ -22,35 +22,37 @@ const NavbarComponent = (props) => {
   return (
     <div>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <NavbarBrand href="/">Continuous Food </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink href="/components/">Components</NavLink>
+              <NavLink href="#">Home</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
+              <NavLink href="">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink href="">Contact Us</NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
-                Options
+                Categories
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                  Option 1
+                  Beverages
                 </DropdownItem>
                 <DropdownItem>
-                  Option 2
+                  Lunch Items
                 </DropdownItem>
-                <DropdownItem divider />
                 <DropdownItem>
-                  Reset
+                  Dinner
                 </DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+        
         </Collapse>
       </Navbar>
     </div>
