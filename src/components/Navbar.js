@@ -21,12 +21,17 @@ const NavbarComponent = (props) => {
   return (
     <div>
       <Navbar  style={{backgroundColor:'#41444a' ,color: '#ffffff'}} variant="dark"light expand="md">
-        <NavbarBrand style={{color: '#ffffff', fontStyle:"italic"}}href="/">Continuous Food </NavbarBrand>
+        <NavbarBrand style={{color: '#ffffff', fontStyle:"italic"}}href="/">
+            <img src="assets/images/logo.png" height="40" width="50" alt="Continuous Food" />
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
             <NavItem>
-              <NavLink style={{color: '#ffffff'}} href="#">Home</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="/home">Home</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink style={{color: '#ffffff'}} href="/menu">Menu</NavLink>
             </NavItem>
             <NavItem>
               <NavLink style={{color: '#ffffff'}} href="">About</NavLink>

@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
-import { Card, CardImg, CardBody, CardText, CardFooter, CardTitle, Button } from 'reactstrap';
-import DishDetail from './DishdetailComponent';
- 
+import React from 'react';
+import { Card, CardImg, CardBody,  CardFooter, CardTitle, Button } from 'reactstrap'; 
 let RenderMenuItem =({dish, onClick})=>{
   return(
-    <Card Body onClick= {()=>onClick(dish.id)}>
+    <Card Body >
       <CardImg top width="100%" src={dish.image} alt={dish.name} />
           <CardBody>
             <CardTitle><h3>

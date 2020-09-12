@@ -1,5 +1,5 @@
 import React from 'react'
-import { Card, CardImg, CardBody, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, CardText, CardFooter, CardTitle, Button, CardHeader, Badge } from 'reactstrap';
+import { Card, CardImg, CardBody, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText,  CardTitle, CardHeader, Badge } from 'reactstrap';
 
 function renderComments(comments) {
     if (comments == null) {
