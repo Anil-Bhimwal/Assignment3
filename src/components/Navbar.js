@@ -34,10 +34,10 @@ const NavbarComponent = (props) => {
               <NavLink style={{color: '#ffffff'}} href="/menu">Menu</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={{color: '#ffffff'}} href="">About</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="/about">About</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink style={{color: '#ffffff'}} href="">Contact Us</NavLink>
+              <NavLink style={{color: '#ffffff'}} href="/contact">Contact Us</NavLink>
             </NavItem>
             <UncontrolledDropdown style={{backgroundColor:'#41444a'}} nav inNavbar>
               <DropdownToggle style={{backgroundColor:'#41444a' ,color: '#ffffff'}} nav caret>

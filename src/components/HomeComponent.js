@@ -1,11 +1,44 @@
 import React from 'react';
+import { Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, CardFooter, Button} from 'reactstrap';
+import { Link } from 'react-router-dom';
+
+function RenderCard({item}) {
+
+    return(
+        <Card>
+            <CardImg height="300px"src={item.image} alt={item.name} />
+            <CardBody>
+            <CardTitle>{item.name}</CardTitle>
+            {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
+            <CardText>{item.description}</CardText>
+            </CardBody>
+            <CardFooter className="text-center ">
+                <Button outline color="secondary">
+                    <Link to = {item.seeAll} >See All</Link>
+                </Button>
+            </CardFooter>
+        </Card>
+    );
+
+}
 
 function Home(props) {
     return(
-      <div className="container">
-        <h4>Home</h4>
-      </div>
+        <div className="container">
+            <div className="row align-items-start">
+                <div className="col-12 col-md m-1">
+                    <RenderCard item={props.dish} />
+                </div>
+                <div className="col-12 col-md m-1">
+                    <RenderCard item={props.leader} />
+                </div>
+                <div className="col-12 col-md m-1">
+                    <RenderCard item={props.promotion} />
+                </div>
+            </div>
+        </div>
     );
 }
 
-export default Home;   
+export default Home;
