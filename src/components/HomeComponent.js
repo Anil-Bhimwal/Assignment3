@@ -1,21 +1,27 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody,
-    CardTitle, CardSubtitle, CardFooter, Button} from 'reactstrap';
+import {
+    Card, CardImg, CardText, CardBody,
+    CardTitle, CardSubtitle, CardFooter, Button
+} from 'reactstrap';
 import { Link } from 'react-router-dom';
 
-function RenderCard({item}) {
+function RenderCard({ item }) {
 
-    return(
+    return (
         <Card>
-            <CardImg height="300px"src={item.image} alt={item.name} />
+            <CardImg height="300px" src={item.image} alt={item.name} />
             <CardBody>
-            <CardTitle>{item.name}</CardTitle>
-            {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null }
-            <CardText>{item.description}</CardText>
+                <CardTitle>
+                    <h4>
+                        {item.name}
+                    </h4>
+                </CardTitle>
+                {item.designation ? <CardSubtitle>{item.designation}</CardSubtitle> : null}
+                <CardText>{item.description}</CardText>
             </CardBody>
             <CardFooter className="text-center ">
                 <Button outline color="secondary">
-                    <Link to = {item.seeAll} >See All</Link>
+                    <Link to={item.seeAll} >See All</Link>
                 </Button>
             </CardFooter>
         </Card>
@@ -24,7 +30,7 @@ function RenderCard({item}) {
 }
 
 function Home(props) {
-    return(
+    return (
         <div className="container">
             <div className="row align-items-start">
                 <div className="col-12 col-md m-1">
