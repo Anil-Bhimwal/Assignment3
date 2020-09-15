@@ -1,6 +1,7 @@
 import React from 'react'
-import { Card, CardImg, CardBody, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, CardTitle, CardHeader, Badge, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+import { Card, CardImg, CardBody, CardFooter, ListGroup, ListGroupItem, ListGroupItemHeading, ListGroupItemText, CardTitle, CardHeader, Badge, Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
+import CommentForm from './CommentFormComponent';
 function RenderComments(comments) {
     if (comments == null) {
         return (<div></div>);
@@ -52,16 +53,16 @@ export default function DishDetail(props) {
                 </div>
                 <div className="row">
                     <Card Body className="col-md-6 dish-image">
-                        <CardImg style={{paddingTop:'20px', paddingBottom: '30px'}}top width="100%" src={dish.image} alt={dish.name} />
+                        <CardImg style={{ paddingTop: '20px', paddingBottom: '30px' }} top width="100%" src={dish.image} alt={dish.name} />
                         <CardTitle>
                             <h3>
                                 {dish.name}
                             </h3>
                         </CardTitle>
-                        <cardtext style={{paddingBottom: '30px'}}>{dish.description}</cardtext>
+                        <cardtext style={{ paddingBottom: '30px' }}>{dish.description}</cardtext>
                     </Card>
-                    <Card Body className="col-md-6" style={{paddingTop:'20px'}}>
-                        <CardHeader   className="text-right">
+                    <Card Body className="col-md-6" style={{ paddingTop: '20px' }}>
+                        <CardHeader className="text-right">
                             <button>Add</button>
                         </CardHeader>
                         <CardBody>
@@ -72,8 +73,10 @@ export default function DishDetail(props) {
                             <cardtext>
                                 {RenderComments(props.comments)}
                             </cardtext>
-
                         </CardBody>
+                        <CardFooter style={{marginBottom: "20px"}}>
+                            <CommentForm />
+                        </CardFooter>
                     </Card>
                 </div>
             </div>
