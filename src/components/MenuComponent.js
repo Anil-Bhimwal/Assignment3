@@ -7,7 +7,8 @@ let RenderMenuItem = ({ dish, onClick }) => {
       <Link to={`/menu/${dish.id}`}>
         <CardImg top width="100%" src={dish.image} alt={dish.name} />
         <CardBody>
-          <CardTitle><h3>
+          <CardTitle style={{color:"grey"}} className="text-center">
+          <h3>
             {dish.name}
           </h3>
           </CardTitle>
