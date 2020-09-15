@@ -113,7 +113,7 @@ export class CommentForm extends Component {
                                             required: 'Required Field. ',
 
                                         }}
-                                    />
+                                    /> 
                                 </Col>
                             </Row>
                             <Button type="submit" value="submit" color="primary">Submit</Button>
