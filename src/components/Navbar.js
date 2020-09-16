@@ -6,7 +6,7 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
+    Link,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -28,16 +28,16 @@ const NavbarComponent = (props) => {
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <NavLink style={{ color: '#ffffff' }} href="/home">Home</NavLink>
+                            <Link style={{ color: '#ffffff' }} href="/home">Home</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink style={{ color: '#ffffff' }} href="/menu">Menu</NavLink>
+                            <Link style={{ color: '#ffffff' }} href="/menu">Menu</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink style={{ color: '#ffffff' }} href="/about">About</NavLink>
+                            <Link style={{ color: '#ffffff' }} href="/about">About</Link>
                         </NavItem>
                         <NavItem>
-                            <NavLink style={{ color: '#ffffff' }} href="/contact">Contact Us</NavLink>
+                            <Link style={{ color: '#ffffff' }} href="/contact">Contact Us</Link>
                         </NavItem>
                         <UncontrolledDropdown style={{ backgroundColor: '#41444a' }} nav inNavbar>
                             <DropdownToggle style={{ backgroundColor: '#41444a', color: '#ffffff' }} nav caret>
