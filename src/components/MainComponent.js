@@ -9,6 +9,7 @@ import DishDetail from './DishdetailComponent';
 import About from './AboutComponent';
 import { connect } from 'react-redux';
 import { addComment, fetchDishes } from '../redux/ActionCreators';
+import { actions } from 'react-redux-form';
 const mapStateToProps = state => {
   return {
     dishes: state.dishes,
@@ -20,7 +21,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   addComment: (dishId, rating, author, comment) =>
     dispatch(addComment(dishId, rating, author, comment)),
-    fetchDishes: () => { dispatch(fetchDishes())}
+    fetchDishes: () => { dispatch(fetchDishes())},
+    resetFeedbackForm: () => { dispatch(actions.reset('feedback'))}
 });
 class Main extends Component {
 
@@ -59,7 +61,7 @@ class Main extends Component {
             <Route path="/home" component={HomePage} />
             {/* using callback for passing the props  */}
             <Route exact path="/menu" component={() => <Menu dishes={this.props.dishes} />} />
-            <Route exact path='/contact' component={Contact} />
+            <Route exact path='/contact' component={() => <Contact resetFeedbackForm={this.props.resetFeedbackForm} />} />
             <Route path='/about' component={() => <About leaders={this.props.leaders} />} />
             <Route path='/menu/:dishId' component={DishWithId} />
             <Redirect to="/home" />
