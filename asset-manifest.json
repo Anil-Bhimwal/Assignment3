@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Assignment3/static/css/main.33b7aa5f.chunk.css",
+    "main.js": "/Assignment3/static/js/main.41c6f9b2.chunk.js",
+    "main.js.map": "/Assignment3/static/js/main.41c6f9b2.chunk.js.map",
+    "runtime-main.js": "/Assignment3/static/js/runtime-main.30e2e242.js",
+    "runtime-main.js.map": "/Assignment3/static/js/runtime-main.30e2e242.js.map",
+    "static/css/2.8ce0910b.chunk.css": "/Assignment3/static/css/2.8ce0910b.chunk.css",
+    "static/js/2.9f2438a8.chunk.js": "/Assignment3/static/js/2.9f2438a8.chunk.js",
+    "static/js/2.9f2438a8.chunk.js.map": "/Assignment3/static/js/2.9f2438a8.chunk.js.map",
+    "index.html": "/Assignment3/index.html",
+    "precache-manifest.f6c2818c6f12f423c3a9830ea3a896c9.js": "/Assignment3/precache-manifest.f6c2818c6f12f423c3a9830ea3a896c9.js",
+    "service-worker.js": "/Assignment3/service-worker.js",
+    "static/css/2.8ce0910b.chunk.css.map": "/Assignment3/static/css/2.8ce0910b.chunk.css.map",
+    "static/css/main.33b7aa5f.chunk.css.map": "/Assignment3/static/css/main.33b7aa5f.chunk.css.map",
+    "static/js/2.9f2438a8.chunk.js.LICENSE.txt": "/Assignment3/static/js/2.9f2438a8.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.css": "/Assignment3/static/media/fontawesome-webfont.fee66e71.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.30e2e242.js",
+    "static/css/2.8ce0910b.chunk.css",
+    "static/js/2.9f2438a8.chunk.js",
+    "static/css/main.33b7aa5f.chunk.css",
+    "static/js/main.41c6f9b2.chunk.js"
+  ]
+}
