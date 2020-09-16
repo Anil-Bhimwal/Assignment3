@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import CommentForm from './CommentFormComponent';
 import { Loading } from './LoadingComponent';
 import { baseUrl } from '../shared/baseUrl';
-function RenderComments(comments, addComment, dishId) {
+function RenderComments(comments, postComment, dishId) {
     if (comments == null) {
         return (<div></div>);
     }
@@ -60,6 +60,7 @@ export default function DishDetail(props) {
     else if (props.dish != null){
 
         let dish = props.dish;
+        let postComment=props.postComment;
     return (
         <div className="container">
             <div className="row">
@@ -90,11 +91,11 @@ export default function DishDetail(props) {
                             Comments:
                         </h4>
                         <cardtext>
-                            {RenderComments(props.comments)}
+                            {RenderComments(props.comments, postComment, dish.id)}
                         </cardtext>
                     </CardBody>
                     <CardFooter style={{ marginBottom: "20px" }}>
-                        <CommentForm dishId={dish.id} addComment={props.addComment} />
+                        <CommentForm dishId={dish.id} postComment={postComment} />
                     </CardFooter>
                 </Card>
             </div>
