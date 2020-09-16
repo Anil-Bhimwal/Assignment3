@@ -199,3 +199,60 @@ export const leadersFailed = (err) => ({
     type: ActionTypes.LEADERS_FAILED,
     payload: err,
 })
+
+
+// FEEDBACK
+
+export const userFeedBack = (feedback) => ({
+    type: ActionTypes.USER_FEEDBACK,
+    payload: feedback,
+  })
+  
+  export const postFeedBack = (
+    firstName,
+    lastName,
+    telNumber,
+    email,
+    agreeToContact,
+    contactType,
+    message
+  ) => (dispatch) => {
+    const newFeedBack = {
+      firstName: firstName,
+      lastName: lastName,
+      telNumber: telNumber,
+      email: email,
+      agreeToContact: agreeToContact,
+      contactType: contactType,
+      message: message,
+    }
+  
+    newFeedBack.date = new Date (). toISOString ()
+  
+    return fetch (baseUrl + "feedback", {
+      method: "POST",
+      body: JSON.stringify (newFeedBack),
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "same-origin",
+    })
+      .then (
+        (response) => {
+          if (response.ok) {
+            return response
+          } else {
+            var error = new Error ("Error:" + response.status)
+            error.response = response
+            throw error
+          }
+        },
+        (error) => {
+          var err = new Error (error.message)
+          throw err
+        }
+      )
+      .then ((response) => response.json ())
+      .then ((response) => dispatch (userFeedBack (response)))
+      .catch ((error) => console.log ("Post feedback", error.message))
+  }
