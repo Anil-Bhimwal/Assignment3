@@ -3,6 +3,7 @@ import { Card, CardImg, CardBody, CardFooter, ListGroup, ListGroupItem, ListGrou
 import { Link } from 'react-router-dom';
 import CommentForm from './CommentFormComponent';
 import { Loading } from './LoadingComponent';
+import { baseUrl } from '../shared/baseUrl';
 function RenderComments(comments, addComment, dishId) {
     if (comments == null) {
         return (<div></div>);
@@ -70,7 +71,7 @@ export default function DishDetail(props) {
             </div>
             <div className="row">
                 <Card Body className="col-md-6 dish-image">
-                    <CardImg style={{ paddingTop: '20px', paddingBottom: '30px' }} top width="100%" src={dish.image} alt={dish.name} />
+                    <CardImg style={{ paddingTop: '20px', paddingBottom: '30px' }} top width="100%" src={baseUrl + dish.image} alt={dish.name} />
                     <CardTitle>
                         <h3>
                             {dish.name}
@@ -79,8 +80,9 @@ export default function DishDetail(props) {
                     <cardtext style={{ paddingBottom: '30px' }}>{dish.description}</cardtext>
                 </Card>
                 <Card Body className="col-md-6" style={{ paddingTop: '20px' }}>
-                    <CardHeader className="text-right">
-                        <button>Add</button>
+                    <CardHeader >
+                        <Badge color="info">{dish.price}</Badge>
+                        <button style={{marginLeft: "350px"}}>Add</button>
                     </CardHeader>
                     <CardBody>
 

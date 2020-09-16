@@ -6,12 +6,13 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    Link,
     UncontrolledDropdown,
     DropdownToggle,
     DropdownMenu,
     DropdownItem, Button
 } from 'reactstrap';
+import { NavLink } from 'react-router-dom';
+import { baseUrl } from '../shared/baseUrl';
 
 const NavbarComponent = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -22,22 +23,22 @@ const NavbarComponent = (props) => {
         <div>
             <Navbar style={{ backgroundColor: '#41444a', color: '#ffffff' }} variant="dark" light expand="md">
                 <NavbarBrand style={{ color: '#ffffff', fontStyle: "italic" }} href="/">
-                    <img src="assets/images/logo.png" height="40" width="100" alt="Continuous Food" />
+                    <img src="/assets/images/logo.png" height="40" width="100" alt="Continuous Food" />
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>
                     <Nav className="mr-auto" navbar>
                         <NavItem>
-                            <Link style={{ color: '#ffffff' }} href="/home">Home</Link>
+                            <NavLink className="nav-link"to="/home" style={{ color: '#ffffff' }} >Home</NavLink>
                         </NavItem>
                         <NavItem>
-                            <Link style={{ color: '#ffffff' }} href="/menu">Menu</Link>
+                            <NavLink className="nav-link"to="/menu" style={{ color: '#ffffff' }} >Menu</NavLink>
                         </NavItem>
                         <NavItem>
-                            <Link style={{ color: '#ffffff' }} href="/about">About</Link>
+                            <NavLink className="nav-link"to="/about" style={{ color: '#ffffff' }} >About</NavLink>
                         </NavItem>
                         <NavItem>
-                            <Link style={{ color: '#ffffff' }} href="/contact">Contact Us</Link>
+                            <NavLink className="nav-link"to="/contact" style={{ color: '#ffffff' }} >Contact Us</NavLink>
                         </NavItem>
                         <UncontrolledDropdown style={{ backgroundColor: '#41444a' }} nav inNavbar>
                             <DropdownToggle style={{ backgroundColor: '#41444a', color: '#ffffff' }} nav caret>
@@ -61,6 +62,7 @@ const NavbarComponent = (props) => {
                             <Button outline onClick={props.toggleModal} style={{ color: '#ffffff', marginTop:"5px" }}><span className="fa fa-sign-in fa-lg"></span> Login</Button>
                         </NavItem>
                     </Nav>
+
                 </Collapse>
             </Navbar>
         </div>
