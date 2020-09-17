@@ -19,8 +19,8 @@ function RenderCard({ item, isLoading, errMess }) {
     }
     else
         return (
-            <Card>
-                <CardImg height="300px" src={baseUrl + item.image} alt={item.name} />
+            <Card >
+                <CardImg height="250px" src={baseUrl + item.image} alt={item.name} />
                 <CardBody>
                     <CardTitle>
                         <h4>

@@ -12,7 +12,6 @@ import {
     DropdownItem, Button
 } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { baseUrl } from '../shared/baseUrl';
 
 const NavbarComponent = (props) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +22,7 @@ const NavbarComponent = (props) => {
         <div>
             <Navbar style={{ backgroundColor: '#41444a', color: '#ffffff' }} variant="dark" light expand="md">
                 <NavbarBrand style={{ color: '#ffffff', fontStyle: "italic" }} href="/">
-                    <img src="/assets/images/logo.png" height="40" width="100" alt="Continuous Food" />
+                    <img src="assets/images/logo.png" height="40" width="100" alt="Continuous Food" />
                 </NavbarBrand>
                 <NavbarToggler onClick={toggle} />
                 <Collapse isOpen={isOpen} navbar>

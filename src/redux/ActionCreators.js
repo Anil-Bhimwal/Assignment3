@@ -227,7 +227,7 @@ export const userFeedBack = (feedback) => ({
       message: message,
     }
   
-    newFeedBack.date = new Date (). toISOString ()
+    newFeedBack.date = new Date ().toISOString()
   
     return fetch (baseUrl + "feedback", {
       method: "POST",

@@ -256,7 +256,7 @@ class Contact extends Component {
                           India<br />
                             <i className="fa fa-phone"></i>: +91 12345 67810<br />
                             <i className="fa fa-fax"></i>: +91 10876 54321<br />
-                            <i className="fa fa-envelope"></i>: <a href="#">continuous@food.net</a> <br/>
+                            <i className="fa fa-envelope"></i>: <a href="contunous@food.net">continuous@food.net</a> <br/>
                         </address>
                     </div>
                     <div className="col-12 col-sm-6 offset-sm-1">
